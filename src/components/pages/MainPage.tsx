@@ -165,15 +165,15 @@ export default function MainPage() {
                                     <div className="flex gap-2 2xl:items-center md:items-end items-start justify-between 2xl:flex-row flex-col">
                                         <div className="bg-gray-secondary rounded-3xl font-bold px-10 py-3 sm:w-auto w-full">
                                             <input className="hidden" type="checkbox" name="" id="score-check" />
-                                            <label className="font-body font-medium text-xl text-secondary" htmlFor="score-check"><div>Always include <span className='font-extrabold'>Score</span></div></label>
+                                            <label className="font-body font-medium text-xl text-secondary md:gap-6 gap-4" htmlFor="score-check"><div>Always include <span className='font-extrabold'>Score</span></div></label>
                                         </div>
                                         <div className="bg-gray-secondary rounded-3xl font-bold px-10 py-3 sm:w-auto w-full">
                                             <input className="hidden" type="checkbox" name="" id="handicap-check" />
-                                            <label className="font-body font-medium text-xl text-secondary" htmlFor="handicap-check"><div>Always include <span className='font-extrabold'>Handicap</span></div></label>
+                                            <label className="font-body font-medium text-xl text-secondary md:gap-6 gap-4" htmlFor="handicap-check"><div>Always include <span className='font-extrabold'>Handicap</span></div></label>
                                         </div>
                                         <div className="bg-gray-secondary rounded-3xl font-bold px-10 py-3 sm:w-auto w-full">
                                             <input className="hidden" type="checkbox" name="" id="total-check" />
-                                            <label className="font-body font-medium text-xl text-secondary" htmlFor="total-check"><div>Always include <span className='font-extrabold'>Total</span></div></label>
+                                            <label className="font-body font-medium text-xl text-secondary md:gap-6 gap-4" htmlFor="total-check"><div>Always include <span className='font-extrabold'>Total</span></div></label>
                                         </div>
                                     </div>
                                     <p className='text-secondary text-lg font-medium font-body text-right max-w-2xl ml-auto'>These are master settings - if chosen, they will be applied on each card below.<br/>You can change them separately on a specific card of your choice.</p>
@@ -181,19 +181,19 @@ export default function MainPage() {
 
                                 <div className="flex mt-4 flex-col md:p-8 px-4 py-6 bg-gray-secondary rounded-3xl gap-10">
                                     <div className="card-side gap-10 flex-col">
-                                        <div className="flex flex-wrap items-center justify-between gap-3">
-                                            <div className="flex gap-2">
-                                                <p className='text-secondary md:text-lg text-sm font-medium font-body bg-dark rounded-full py-2 md:px-8 px-2'>Dota 2</p>
-                                                <p className='text-secondary md:text-lg text-sm font-medium font-body bg-dark rounded-full py-2 md:px-8 px-2'>18 / 05 / 2025</p>
-                                                <p className='text-secondary md:text-lg text-sm font-medium font-body bg-dark rounded-full py-2 md:px-8 px-2'>03:30 GTM</p>
+                                        <div className="flex flex-wrap items-center justify-between gap-6">
+                                            <div className="flex flex-wrap gap-2">
+                                                <p className='text-secondary md:text-lg text-sm font-medium font-body bg-dark rounded-full py-2 md:px-8 px-4'>Dota 2</p>
+                                                <p className='text-secondary md:text-lg text-sm font-medium font-body bg-dark rounded-full py-2 md:px-8 px-4'>18 / 05 / 2025</p>
+                                                <p className='text-secondary md:text-lg text-sm font-medium font-body bg-dark rounded-full py-2 md:px-8 px-4'>03:30 GTM</p>
                                             </div>
-                                            <div className="flex md:gap-6 gap-4">
+                                            <div className="flex flex-wrap md:gap-6 gap-4 pl-4">
                                                 <input className="hidden" type="checkbox" name="" id="card-check1" />
-                                                <label className="font-body font-semibold text-xl text-secondary" htmlFor="card-check1">Score</label>
+                                                <label className="font-body font-semibold text-xl md:gap-4 gap-2 text-secondary" htmlFor="card-check1">Score</label>
                                                 <input className="hidden" type="checkbox" name="" id="card-check2" />
-                                                <label className="font-body font-semibold text-xl text-secondary" htmlFor="card-check2">Handicap</label>
+                                                <label className="font-body font-semibold text-xl md:gap-4 gap-2 text-secondary" htmlFor="card-check2">Handicap</label>
                                                 <input className="hidden" type="checkbox" name="" id="card-check3" />
-                                                <label className="font-body font-semibold text-xl text-secondary" htmlFor="card-check3">Total</label>
+                                                <label className="font-body font-semibold text-xl md:gap-4 gap-2 text-secondary" htmlFor="card-check3">Total</label>
                                             </div>
                                         </div>
                                         <div className="flex xl:flex-nowrap flex-wrap gap-10">
@@ -312,19 +312,19 @@ export default function MainPage() {
                                 </div>
                                 <div className="flex flex-col md:p-8 px-4 py-6 bg-gray-secondary rounded-3xl gap-10">
                                     <div className="card-side gap-10 flex-col">
-                                        <div className="flex flex-wrap items-center justify-between gap-3">
-                                            <div className="flex gap-2">
-                                                <p className='text-secondary md:text-lg text-sm font-medium font-body bg-dark rounded-full py-2 md:px-8 px-2'>Dota 2</p>
-                                                <p className='text-secondary md:text-lg text-sm font-medium font-body bg-dark rounded-full py-2 md:px-8 px-2'>18 / 05 / 2025</p>
-                                                <p className='text-secondary md:text-lg text-sm font-medium font-body bg-dark rounded-full py-2 md:px-8 px-2'>03:30 GTM</p>
+                                        <div className="flex flex-wrap items-center justify-between gap-6">
+                                            <div className="flex flex-wrap gap-2">
+                                                <p className='text-secondary md:text-lg text-sm font-medium font-body bg-dark rounded-full py-2 md:px-8 px-4'>Dota 2</p>
+                                                <p className='text-secondary md:text-lg text-sm font-medium font-body bg-dark rounded-full py-2 md:px-8 px-4'>18 / 05 / 2025</p>
+                                                <p className='text-secondary md:text-lg text-sm font-medium font-body bg-dark rounded-full py-2 md:px-8 px-4'>03:30 GTM</p>
                                             </div>
-                                            <div className="flex md:gap-6 gap-4">
+                                            <div className="flex flex-wrap md:gap-6 gap-4 pl-4">
                                                 <input className="hidden" type="checkbox" name="" id="card-check4" />
-                                                <label className="font-body font-semibold text-xl text-secondary" htmlFor="card-check4">Score</label>
+                                                <label className="font-body font-semibold text-xl md:gap-4 gap-2 text-secondary" htmlFor="card-check4">Score</label>
                                                 <input className="hidden" type="checkbox" name="" id="card-check5" />
-                                                <label className="font-body font-semibold text-xl text-secondary" htmlFor="card-check5">Handicap</label>
+                                                <label className="font-body font-semibold text-xl md:gap-4 gap-2 text-secondary" htmlFor="card-check5">Handicap</label>
                                                 <input className="hidden" type="checkbox" name="" id="card-check6" />
-                                                <label className="font-body font-semibold text-xl text-secondary" htmlFor="card-check6">Total</label>
+                                                <label className="font-body font-semibold text-xl md:gap-4 gap-2 text-secondary" htmlFor="card-check6">Total</label>
                                             </div>
                                         </div>
                                         <div className="flex xl:flex-nowrap flex-wrap gap-10">
@@ -443,19 +443,19 @@ export default function MainPage() {
                                 </div>
                                 <div className="flex flex-col md:p-8 px-4 py-6 bg-gray-secondary rounded-3xl gap-10">
                                     <div className="card-side gap-10 flex-col">
-                                        <div className="flex flex-wrap items-center justify-between gap-3">
-                                            <div className="flex gap-2">
-                                                <p className='text-secondary md:text-lg text-sm font-medium font-body bg-dark rounded-full py-2 md:px-8 px-2'>Dota 2</p>
-                                                <p className='text-secondary md:text-lg text-sm font-medium font-body bg-dark rounded-full py-2 md:px-8 px-2'>18 / 05 / 2025</p>
-                                                <p className='text-secondary md:text-lg text-sm font-medium font-body bg-dark rounded-full py-2 md:px-8 px-2'>03:30 GTM</p>
+                                        <div className="flex flex-wrap items-center justify-between gap-6">
+                                            <div className="flex flex-wrap gap-2">
+                                                <p className='text-secondary md:text-lg text-sm font-medium font-body bg-dark rounded-full py-2 md:px-8 px-4'>Dota 2</p>
+                                                <p className='text-secondary md:text-lg text-sm font-medium font-body bg-dark rounded-full py-2 md:px-8 px-4'>18 / 05 / 2025</p>
+                                                <p className='text-secondary md:text-lg text-sm font-medium font-body bg-dark rounded-full py-2 md:px-8 px-4'>03:30 GTM</p>
                                             </div>
-                                            <div className="flex md:gap-6 gap-4">
+                                            <div className="flex flex-wrap md:gap-6 gap-4 pl-4">
                                                 <input className="hidden" type="checkbox" name="" id="card-check7" />
-                                                <label className="font-body font-semibold text-xl text-secondary" htmlFor="card-check7">Score</label>
+                                                <label className="font-body font-semibold text-xl md:gap-4 gap-2 text-secondary" htmlFor="card-check7">Score</label>
                                                 <input className="hidden" type="checkbox" name="" id="card-check8" />
-                                                <label className="font-body font-semibold text-xl text-secondary" htmlFor="card-check8">Handicap</label>
+                                                <label className="font-body font-semibold text-xl md:gap-4 gap-2 text-secondary" htmlFor="card-check8">Handicap</label>
                                                 <input className="hidden" type="checkbox" name="" id="card-check9" />
-                                                <label className="font-body font-semibold text-xl text-secondary" htmlFor="card-check9">Total</label>
+                                                <label className="font-body font-semibold text-xl md:gap-4 gap-2 text-secondary" htmlFor="card-check9">Total</label>
                                             </div>
                                         </div>
                                         <div className="flex xl:flex-nowrap flex-wrap gap-10">

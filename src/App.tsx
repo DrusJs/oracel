@@ -28,24 +28,24 @@ function App() {
     <div className='flex flex-col min-h-dvh'>
       <Header />
       <Routes>
-        <Route path="/oracel/pages" element={<MainPage />} />
-        <Route path="/oracel/legal" element={<LegalPage />} />
-        <Route path="/oracel/auth" element={<AuthPage />} />
-        <Route path="/oracel/signin" element={<SignInPage />} />
-        <Route path="/oracel/account" element={<AccountPage />} />
-        <Route path="/oracel/balance" element={<BalancePage />} />
-        <Route path="/oracel/balance-await" element={<BalanceAwaitPage />} />
-        <Route path="/oracel/oops" element={<MessagePage />} />
-        <Route path="/oracel/signout" element={<SignOutSuccessPage />} />
-        <Route path="/oracel/" element={<SiteMap />} />
+        <Route path="/pages" element={<MainPage />} />
+        <Route path="/legal" element={<LegalPage />} />
+        <Route path="/auth" element={<AuthPage />} />
+        <Route path="/signin" element={<SignInPage />} />
+        <Route path="/account" element={<AccountPage />} />
+        <Route path="/balance" element={<BalancePage />} />
+        <Route path="/balance-await" element={<BalanceAwaitPage />} />
+        <Route path="/oops" element={<MessagePage />} />
+        <Route path="/signout" element={<SignOutSuccessPage />} />
+        <Route path="/" element={<SiteMap />} />
       
-        <Route path="/oracel/trMainPage" element={<TRMainPage />} />
-        <Route path="/oracel/trAccountPage" element={<TRAccountPage />} />
-        <Route path="/oracel/trBalancePage" element={<TRBalancePage />} />
-        <Route path="/oracel/dtMainPage" element={<DTMainPage />} />
-        <Route path="/oracel/dtAccountPage" element={<DTAccountPage />} />
-        <Route path="/oracel/dtBalancePage" element={<DTBalancePage />} />
-        <Route path="/oracel/logout" element={<LogoutPage />} />
+        <Route path="/trMainPage" element={<TRMainPage />} />
+        <Route path="/trAccountPage" element={<TRAccountPage />} />
+        <Route path="/trBalancePage" element={<TRBalancePage />} />
+        <Route path="/dtMainPage" element={<DTMainPage />} />
+        <Route path="/dtAccountPage" element={<DTAccountPage />} />
+        <Route path="/dtBalancePage" element={<DTBalancePage />} />
+        <Route path="/logout" element={<LogoutPage />} />
       </Routes>     
       <Footer />
     </div>

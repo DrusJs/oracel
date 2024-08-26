@@ -4,7 +4,7 @@ export default function LegalPage() {
 
     return (
         <main className="main flex flex-col flex-1">
-            <div className="container container-sm mt-36">
+            <div className="container container-sm md:mt-36 mt-20">
                 <div className="flex md:flex-nowrap flex-wrap md:gap-32 gap-20">
                     <div className="flex flex-col font-display text-white w-full max-w-xl">
                         <Link to="#" className="text-4xl font-bold md:mb-8 mb-6">Company name</Link>

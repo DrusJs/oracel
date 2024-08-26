@@ -93,7 +93,7 @@ input:read-only {
 input[type='checkbox'] + label {
     display: flex;
     align-items: center;
-    gap: 16px;
+    line-height: 1;
     cursor: pointer;
 
     &.items-start {
@@ -101,7 +101,6 @@ input[type='checkbox'] + label {
     }
 
     @media (max-width: 768px) {
-        gap: 6px;
         font-size: 16px;
     }
 }
