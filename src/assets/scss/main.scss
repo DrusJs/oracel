@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'TexGyreHeros';
+    src: url(../fonts/texgyreheros-regular.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'TexGyreHeros';
+    src: url(../fonts/texgyreheros-bold.woff);
+    font-weight: 700;
+}
+
+body {
+    background-color: #1C1B23;
+    color: #2D2D32;
+}
+
+.main-banner {
+    max-width: 1872px;
+}
+
+.container {
+    &.container-sm {
+        max-width: 1320px;
+    }
+}
+
+@media (min-width: 1536px) {
+    .xl\:container {
+      max-width: 1680px !important;
+    }
+
+    .\32 xl\:container {
+        max-width: 1680px !important;
+    }
+}
+
+.main-flex {
+    display: flex;
+
+    @media (max-width: 1620px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .main-img {
+            order: 1;
+            min-width: 582px;
+        }
+    }
+    @media (max-width: 1140px) {
+        display: flex;
+        flex-direction: column-reverse;
+
+        .main-img {
+            margin: 0 auto;
+            order: -1;
+            width: 500px;
+            min-width: auto;
+            margin-top: -130px;
+            position: relative;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .main-img {
+            width: 360px;
+        }
+    }
+}
+
+.active_item {
+    color: #2D2D32 !important;
+    background-color: #FFFFFF !important;
+}
+
+input,
+textarea {
+    outline: none !important;
+}
+
+textarea {
+    border-radius: 50px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #848484;
+}
+input:read-only {
+    color: #5A5A5A;
+}
+
+input[type='checkbox'] + label {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+
+    &.items-start {
+        align-items: flex-start;
+    }
+
+    @media (max-width: 768px) {
+        gap: 6px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-text {
+        font-size: 34.5vw !important;
+        line-height: 24vw !important;
+    }
+}
+.card-outside {
+    display: none;
+}
+
+.card-side {
+    display: flex;
+}
+
+.active .card-outside {
+    display: flex;
+}
+
+.active .card-side {
+    display: none;
+}
+
+input[type='checkbox'] + label::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    min-height: 24px;
+    min-width: 24px;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+input[type='checkbox']:checked + label::before  {
+    background-color: #B8FF72;
+    background-image: url("data:image/svg+xml,%3Csvg width='19' height='13' viewBox='0 0 19 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 1.5L7 11.5L2 6.5' stroke='%231C1B23' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+    opacity: 0;
+}
+
+.rounded-main {
+    border-radius: 20px 50px 50px 50px;
+}
+
+@media (max-width: 1023.98px) {
+    .navigation {
+        position: absolute;
+        right: 0;
+        pointer-events: none;
+        width: 0;
+        top: 0;
+        overflow: hidden;
+        z-index: 100;
+        padding: 30px 0;
+        border-radius: 30px 0 0 30px;
+        height: 100dvh;
+        background-color: #1C1B23;
+        transition: 160ms ease;
+    }
+    .navigation.active {
+        width: 314px;
+        padding: 30px 24px;
+        pointer-events: all;
+        transition: 400ms ease;
+    }
+  }
