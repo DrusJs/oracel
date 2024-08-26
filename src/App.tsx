@@ -37,7 +37,7 @@ function App() {
         <Route path="/oracel/balance-await" element={<BalanceAwaitPage />} />
         <Route path="/oracel/oops" element={<MessagePage />} />
         <Route path="/oracel/signout" element={<SignOutSuccessPage />} />
-        <Route path="/oracel/build" element={<SiteMap />} />
+        <Route path="/oracel/" element={<SiteMap />} />
       
         <Route path="/oracel/trMainPage" element={<TRMainPage />} />
         <Route path="/oracel/trAccountPage" element={<TRAccountPage />} />
