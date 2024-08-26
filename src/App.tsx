@@ -28,24 +28,24 @@ function App() {
     <div className='flex flex-col min-h-dvh'>
       <Header />
       <Routes>
-        <Route path="/oracel/build/pages" element={<MainPage />} />
-        <Route path="/oracel/build/legal" element={<LegalPage />} />
-        <Route path="/oracel/build/auth" element={<AuthPage />} />
-        <Route path="/oracel/build/signin" element={<SignInPage />} />
-        <Route path="/oracel/build/account" element={<AccountPage />} />
-        <Route path="/oracel/build/balance" element={<BalancePage />} />
-        <Route path="/oracel/build/balance-await" element={<BalanceAwaitPage />} />
-        <Route path="/oracel/build/oops" element={<MessagePage />} />
-        <Route path="/oracel/build/signout" element={<SignOutSuccessPage />} />
+        <Route path="/oracel/pages" element={<MainPage />} />
+        <Route path="/oracel/legal" element={<LegalPage />} />
+        <Route path="/oracel/auth" element={<AuthPage />} />
+        <Route path="/oracel/signin" element={<SignInPage />} />
+        <Route path="/oracel/account" element={<AccountPage />} />
+        <Route path="/oracel/balance" element={<BalancePage />} />
+        <Route path="/oracel/balance-await" element={<BalanceAwaitPage />} />
+        <Route path="/oracel/oops" element={<MessagePage />} />
+        <Route path="/oracel/signout" element={<SignOutSuccessPage />} />
         <Route path="/oracel/build" element={<SiteMap />} />
       
-        <Route path="/oracel/build/trMainPage" element={<TRMainPage />} />
-        <Route path="/oracel/build/trAccountPage" element={<TRAccountPage />} />
-        <Route path="/oracel/build/trBalancePage" element={<TRBalancePage />} />
-        <Route path="/oracel/build/dtMainPage" element={<DTMainPage />} />
-        <Route path="/oracel/build/dtAccountPage" element={<DTAccountPage />} />
-        <Route path="/oracel/build/dtBalancePage" element={<DTBalancePage />} />
-        <Route path="/oracel/build/logout" element={<LogoutPage />} />
+        <Route path="/oracel/trMainPage" element={<TRMainPage />} />
+        <Route path="/oracel/trAccountPage" element={<TRAccountPage />} />
+        <Route path="/oracel/trBalancePage" element={<TRBalancePage />} />
+        <Route path="/oracel/dtMainPage" element={<DTMainPage />} />
+        <Route path="/oracel/dtAccountPage" element={<DTAccountPage />} />
+        <Route path="/oracel/dtBalancePage" element={<DTBalancePage />} />
+        <Route path="/oracel/logout" element={<LogoutPage />} />
       </Routes>     
       <Footer />
     </div>
