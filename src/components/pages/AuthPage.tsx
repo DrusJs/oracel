@@ -21,9 +21,9 @@ export default function AuthPage() {
                             <input type="email" name="email-input" id="email-input" className="outline-transparent w-full text-xl text-white py-6 px-10 bg-input rounded-full mb-6" placeholder="What’s your e-mail?" />
                             <input type="text" name="topic-input" id="topic-input" className="outline-transparent w-full text-xl text-white py-6 px-10 bg-input rounded-full mb-6" placeholder="What’s the topic?" />
                             <input className="hidden" type="checkbox" name="" id="privacy" />
-                            <label className="mt-12 items-start font-body text-white" htmlFor="privacy">I have read and accepted «Terms and Conditions», «Responsible gaming», «No warranties»</label>
+                            <label className="mt-12 items-start font-body text-white flex md:gap-6 gap-4" htmlFor="privacy">I have read and accepted «Terms and Conditions», «Responsible gaming», «No warranties»</label>
                             <input className="hidden" type="checkbox" name="" id="age-check" />
-                            <label className="mt-3 items-start font-body text-white" htmlFor="age-check">I am over 18 years old</label>
+                            <label className="mt-3 items-start font-body text-white flex md:gap-6 gap-4" htmlFor="age-check">I am over 18 years old</label>
                             <button className="w-full bg-green text-dark md:text-2xl text-lg md:py-10 py-6 mt-14 flex items-center justify-center font-bold font-display rounded-full gap-6 uppercase hover:opacity-80">
                                 create an account
                                 <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">

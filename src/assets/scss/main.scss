@@ -154,9 +154,26 @@ textarea:focus::placeholder {
     border-radius: 20px 50px 50px 50px;
 }
 
+.modal-wrapper {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms ease;
+}
+
+.modal-wrapper.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
 @media (max-width: 1023.98px) {
+    body:has(.navigation.active) {
+        overflow: hidden;
+    }
+
     .navigation {
-        position: absolute;
+        position: fixed;
         right: 0;
         pointer-events: none;
         width: 0;
@@ -174,5 +191,11 @@ textarea:focus::placeholder {
         padding: 30px 24px;
         pointer-events: all;
         transition: 400ms ease;
+    }
+  }
+
+  @media (min-width: 400px) {
+    .main-desc {
+        font-size: 24px !important;
     }
   }

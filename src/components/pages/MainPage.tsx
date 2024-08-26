@@ -1,7 +1,12 @@
 import { useAuth } from '../../AuthContext';
+import React, { useState } from 'react';
+import Modal from '../features/Modal';
 
 export default function MainPage() {
     const { isAuthenticated } = useAuth();
+    const [isModalOpen, setModalOpen] = useState(false);
+
+    function toggleModal() { setModalOpen(!isModalOpen); } 
 
     function toggleDropdown(e: React.MouseEvent<HTMLElement>) {
         const currentTarget = e.currentTarget as HTMLElement;
@@ -25,7 +30,7 @@ export default function MainPage() {
                     <h1 className="main-text xl:text-[420px] font-head xl:leading-[320px] lg:text-[320px] lg:leading-[240px] md:text-[220px] md:leading-[140px] text-[124px] leading-[100px] text-center text-dark flex flex-wrap">Oracle<span>Bet</span></h1>
                     <div className="main-flex gap-10">
                         <div className="flex flex-col pb-10 col-span-2">
-                            <p className="md:text-5xl text-[22px] uppercase text-dark font-semibold">making sure your bets win</p>
+                            <p className="main-desc md:text-5xl text-[22px] uppercase text-dark font-semibold">making sure your bets win</p>
                             <div className="flex items-center gap-2 mt-8">
                                 <div className="rounded-main md:p-10 p-4 flex flex-col bg-white gap-8">
                                     <p className="font-semibold font-body md:text-2xl text-base uppercase">We work with different sports including</p>
@@ -40,7 +45,7 @@ export default function MainPage() {
                         <img src="img/hero-image.png" alt="Hero Img" className="main-img -mt-[220px] object-contain" width="593"/>
                         <div className="flex flex-col pb-10">
                             <div className="flex md:items-center items-end md:gap-3 md:justify-start justify-between gap-6">
-                                <p className="md:text-4xl text-xl font-semibold text-dark uppercase">to Get your first three forecasts</p>
+                                <p className="main-desc md:text-4xl text-xl font-semibold text-dark uppercase">to Get your first three forecasts</p>
                                 <div className="bg-blue rounded-full md:w-40 md:min-w-40 md:h-40 w-32 h-32 min-w-32 text-white text-2xl uppercase font-bold flex justify-center items-center text-center">for<br></br>free</div>
                             </div>
                             <button className="w-full bg-dark font-display text-white md:text-2xl text-lg mt-8 md:py-10 py-6 flex items-center justify-center font-bold rounded-full gap-6 uppercase">
@@ -75,7 +80,7 @@ export default function MainPage() {
                                     </svg>
                                 </button>
                             </div>
-                            <img className='xl:static absolute -z-10 top-20 right-0 md:w-[170px] w-24' src="img/form-arrow.png" alt="Hero Img"/>
+                            <img className='xl:static absolute object-contain h-auto -z-10 top-20 right-0 md:w-[170px] w-24' src="img/form-arrow.png" alt="Hero Img"/>
                             <form className="flex flex-col w-full max-w-2xl">
                                 <input type="email" name="email-input" id="email-input" className="backdrop-blur outline-transparent w-full text-xl text-white py-6 px-10 bg-input rounded-full mb-6" placeholder="What’s your e-mail?" />
                                 <input type="text" name="topic-input" id="topic-input" className="outline-transparent w-full text-xl text-white py-6 px-10 bg-input rounded-full mb-6" placeholder="What’s the topic?" />
@@ -99,7 +104,7 @@ export default function MainPage() {
                         <aside className="flex flex-col md:p-10 p-8 xl:gap-20 gap-6 bg-green rounded-3xl xl:max-w-md w-full" onClick={toggleDropdown}>
                             <div className="flex justify-between items-center gap-4 cursor-pointer">
                                 <p className="font-body md:text-4xl text-2xl font-semibold uppercase">general info</p>
-                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg className='min-w-10' width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="40" y="40" width="40" height="40" rx="20" transform="rotate(-180 40 40)" fill="white"/>
                                     <path d="M28 24L20 16L12 24" stroke="#2D2D32" strokeWidth="3" strokeLinecap="round"/>
                                 </svg>
@@ -252,7 +257,7 @@ export default function MainPage() {
                                             <div className="flex flex-col w-full bg-dark rounded-3xl p-4">
                                                 <div className="flex items-center justify-between">
                                                     <p className="text-2xl text-tretiary font-body font-semibold">Score</p>
-                                                    <button className="bg-blue px-3 py-1 text-white border-0 rounded-xl text-lg font-body font-semibold">Find out</button>
+                                                    <button className="bg-blue px-3 py-1 text-white border-0 rounded-xl text-lg font-body font-semibold" onClick={toggleModal}>Find out</button>
                                                 </div>
                                                 <div className="flex mt-4">
                                                     <div className="flex flex-col w-full text-center">
@@ -383,7 +388,7 @@ export default function MainPage() {
                                             <div className="flex flex-col w-full bg-dark rounded-3xl p-4">
                                                 <div className="flex items-center justify-between">
                                                     <p className="text-2xl text-tretiary font-body font-semibold">Score</p>
-                                                    <button className="bg-blue px-3 py-1 text-white border-0 rounded-xl text-lg font-body font-semibold">Find out</button>
+                                                    <button className="bg-blue px-3 py-1 text-white border-0 rounded-xl text-lg font-body font-semibold" onClick={toggleModal}>Find out</button>
                                                 </div>
                                                 <div className="flex mt-4">
                                                     <div className="flex flex-col w-full text-center">
@@ -514,7 +519,7 @@ export default function MainPage() {
                                             <div className="flex flex-col w-full bg-dark rounded-3xl p-4">
                                                 <div className="flex items-center justify-between">
                                                     <p className="text-2xl text-tretiary font-body font-semibold">Score</p>
-                                                    <button className="bg-blue px-3 py-1 text-white border-0 rounded-xl text-lg font-body font-semibold">Find out</button>
+                                                    <button className="bg-blue px-3 py-1 text-white border-0 rounded-xl text-lg font-body font-semibold" onClick={toggleModal}>Find out</button>
                                                 </div>
                                                 <div className="flex mt-4">
                                                     <div className="flex flex-col w-full text-center">
@@ -592,6 +597,17 @@ export default function MainPage() {
                     </div>
                 </div>
             </section>
+            <Modal isOpen={isModalOpen} onClose={toggleModal}>
+                <div className="flex flex-col items-center">
+                    <div className="font-body font-semibold md:text-[28px] text-[22px] uppercase flex xl:flex-row flex-col items-center gap-6">
+                        <span>Do you want to add in</span>
+                        <div className="px-10 py-4 bg-blue rounded-[10px] text-white font-body font-semibold text-[22px]">Score</div>
+                        <span>to your purchase ?</span>
+                    </div>
+                    <p className='font-body font-medium md:text-2xl text-[22px] md:mt-16 mt-20 text-center'>Please, proceed the next payment to do so</p>
+                    <button className="bg-green rounded-full font-bold md:text-[28px] w-full max-w-[460px] text-xl mt-10 md:px-10 text-nowrap md:py-6 px-6 py-4 hover:opacity-80">4.10 EUR</button>
+                </div>
+            </Modal>
             </>
             )}
         </main>

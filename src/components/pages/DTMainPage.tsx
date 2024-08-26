@@ -28,7 +28,7 @@ export default function DTMainPage() {
                     <h1 className="text-[420px] font-head leading-none text-center overflow-hidden text-dark">OracleBet</h1>
                     <div className="flex gap-10 flex-wrap">
                         <div className="flex flex-col pb-10">
-                            <p className="text-5xl uppercase text-dark font-semibold">making sure<br></br> your bets win</p>
+                            <p className="main-desc text-5xl uppercase text-dark font-semibold">making sure your bets win</p>
                             <div className="flex items-center gap-2">
                                 <div className="rounded-main p-10 flex flex-col bg-white mt-8 gap-8">
                                     <p className="font-semibold font-body text-2xl uppercase">wir arbeiten mit verschiedenen Sportarten, darunter </p>
@@ -43,7 +43,7 @@ export default function DTMainPage() {
                         <img src="img/hero-image.png" alt="Hero Img" className="-mt-80" width="593"/>
                         <div className="flex flex-col pb-10">
                             <div className="flex items-center gap-3">
-                                <p className="text-4xl font-semibold text-dark uppercase">um Ihre ersten<br></br> drei Prognosen<br></br> zu erhalten </p>
+                                <p className="main-desc text-4xl font-semibold text-dark uppercase">um Ihre erstendrei Prognosen zu erhalten </p>
                                 <div className=" bg-blue rounded-full w-40 h-40 text-white text-2xl uppercase font-bold flex justify-center items-center text-center">for<br></br>free</div>
                             </div>
                             <button className="w-full bg-dark text-white text-2xl mt-8 py-10 flex items-center justify-center font-bold rounded-full gap-6 uppercase">
@@ -96,7 +96,7 @@ export default function DTMainPage() {
                         <aside className="flex flex-col md:p-10 p-8 xl:gap-20 gap-6 bg-green rounded-3xl xl:max-w-md w-full" onClick={toggleDropdown}>
                             <div className="flex justify-between items-center gap-4 cursor-pointer">
                                 <p className="font-body md:text-4xl text-2xl font-semibold uppercase">allgemeine Informationen</p>
-                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg className='min-w-10' width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="40" y="40" width="40" height="40" rx="20" transform="rotate(-180 40 40)" fill="white"/>
                                     <path d="M28 24L20 16L12 24" stroke="#2D2D32" strokeWidth="3" strokeLinecap="round"/>
                                 </svg>

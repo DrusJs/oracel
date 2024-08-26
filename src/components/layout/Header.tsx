@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import React, { useEffect } from 'react';
 import { useAuth } from '../../AuthContext';
 
 export default function Header() {
@@ -14,6 +15,23 @@ export default function Header() {
     function toggleNav() {
         document.querySelector('.navigation')?.classList.toggle('active') 
     }
+
+    const handleClickOutside = (event: MouseEvent) => {
+        const nav = document.querySelector('.navigation');
+        const button = document.querySelector('.navigation-toggle-button');
+    
+        if (nav && !nav.contains(event.target as Node) && !button?.contains(event.target as Node)) {
+          nav.classList.remove('active');
+        }
+      };
+    
+      useEffect(() => {
+        document.addEventListener('click', handleClickOutside);
+    
+        return () => {
+          document.removeEventListener('click', handleClickOutside);
+        };
+      }, []);
     
     return (
         <header className="header">
@@ -79,7 +97,7 @@ export default function Header() {
                     </div>
                     <button className="bg-white rounded-3xl font-bold px-10 py-3 hover:opacity-80 hidden lg:flex" onClick={login}>Sign In</button>
                     <button className="bg-green rounded-3xl font-bold px-10 py-3 hover:opacity-80 hidden lg:flex" onClick={login}>Sign Up</button>
-                    <button className="bg-transparent border-none cursor-pointer flex lg:hidden mt-4" onClick={toggleNav}>
+                    <button className="navigation-toggle-button bg-transparent border-none cursor-pointer flex lg:hidden mt-4" onClick={toggleNav}>
                         <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M23.9474 14.8235C24.4745 14.8237 24.9813 14.9808 25.3628 15.2623C25.7443 15.5438 25.9713 15.928 25.9966 16.3354C26.0219 16.7428 25.8437 17.1422 25.4989 17.4507C25.1541 17.7592 24.6691 17.9532 24.1444 17.9926L23.9474 18H2.05263C1.52549 17.9998 1.01866 17.8427 0.637155 17.5612C0.25565 17.2797 0.0287204 16.8955 0.00338785 16.4881C-0.0219447 16.0807 0.156262 15.6814 0.501082 15.3728C0.845902 15.0643 1.3309 14.8703 1.85558 14.8309L2.05263 14.8235H23.9474ZM23.9474 7.41177C24.4918 7.41177 25.0139 7.5791 25.3988 7.87695C25.7837 8.1748 26 8.57877 26 9C26 9.42123 25.7837 9.8252 25.3988 10.1231C25.0139 10.4209 24.4918 10.5882 23.9474 10.5882H2.05263C1.50824 10.5882 0.986145 10.4209 0.601202 10.1231C0.216259 9.8252 0 9.42123 0 9C0 8.57877 0.216259 8.1748 0.601202 7.87695C0.986145 7.5791 1.50824 7.41177 2.05263 7.41177H23.9474ZM23.9474 0C24.4918 0 25.0139 0.167332 25.3988 0.465183C25.7837 0.763035 26 1.16701 26 1.58824C26 2.00946 25.7837 2.41344 25.3988 2.71129C25.0139 3.00914 24.4918 3.17647 23.9474 3.17647H2.05263C1.50824 3.17647 0.986145 3.00914 0.601202 2.71129C0.216259 2.41344 0 2.00946 0 1.58824C0 1.16701 0.216259 0.763035 0.601202 0.465183C0.986145 0.167332 1.50824 0 2.05263 0H23.9474Z" fill="white"/>
                         </svg>
@@ -169,7 +187,7 @@ export default function Header() {
                         </div>
                     </div>
                     <button className="bg-white rounded-3xl font-bold px-10 py-3 hover:opacity-80 hidden lg:flex" onClick={logout}>Sign Out</button>
-                    <button className="bg-transparent border-none cursor-pointer flex lg:hidden mt-4" onClick={toggleNav}>
+                    <button className="navigation-toggle-button bg-transparent border-none cursor-pointer flex lg:hidden mt-4" onClick={toggleNav}>
                         <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M23.9474 14.8235C24.4745 14.8237 24.9813 14.9808 25.3628 15.2623C25.7443 15.5438 25.9713 15.928 25.9966 16.3354C26.0219 16.7428 25.8437 17.1422 25.4989 17.4507C25.1541 17.7592 24.6691 17.9532 24.1444 17.9926L23.9474 18H2.05263C1.52549 17.9998 1.01866 17.8427 0.637155 17.5612C0.25565 17.2797 0.0287204 16.8955 0.00338785 16.4881C-0.0219447 16.0807 0.156262 15.6814 0.501082 15.3728C0.845902 15.0643 1.3309 14.8703 1.85558 14.8309L2.05263 14.8235H23.9474ZM23.9474 7.41177C24.4918 7.41177 25.0139 7.5791 25.3988 7.87695C25.7837 8.1748 26 8.57877 26 9C26 9.42123 25.7837 9.8252 25.3988 10.1231C25.0139 10.4209 24.4918 10.5882 23.9474 10.5882H2.05263C1.50824 10.5882 0.986145 10.4209 0.601202 10.1231C0.216259 9.8252 0 9.42123 0 9C0 8.57877 0.216259 8.1748 0.601202 7.87695C0.986145 7.5791 1.50824 7.41177 2.05263 7.41177H23.9474ZM23.9474 0C24.4918 0 25.0139 0.167332 25.3988 0.465183C25.7837 0.763035 26 1.16701 26 1.58824C26 2.00946 25.7837 2.41344 25.3988 2.71129C25.0139 3.00914 24.4918 3.17647 23.9474 3.17647H2.05263C1.50824 3.17647 0.986145 3.00914 0.601202 2.71129C0.216259 2.41344 0 2.00946 0 1.58824C0 1.16701 0.216259 0.763035 0.601202 0.465183C0.986145 0.167332 1.50824 0 2.05263 0H23.9474Z" fill="white"/>
                         </svg>
