@@ -18,8 +18,8 @@ export default function AuthPage() {
                             <img src="img/ball.png" alt="Ball sign up" className="-mt-20 w-full"/>
                         </div>
                         <form className="flex flex-col w-full lg:max-w-2xl mt-12">
-                            <input type="email" name="email-input" id="email-input" className="outline-transparent w-full text-xl text-white py-6 px-10 bg-input rounded-full mb-6" placeholder="What’s your e-mail?" />
-                            <input type="text" name="topic-input" id="topic-input" className="outline-transparent w-full text-xl text-white py-6 px-10 bg-input rounded-full mb-6" placeholder="What’s the topic?" />
+                            <input type="email" name="email-input" id="email-input" className="outline-transparent w-full font-display md:text-[22px] text-base text-white py-6 md:px-10 px-6 bg-input rounded-full mb-6" placeholder="What’s your e-mail?" />
+                            <input type="text" name="topic-input" id="topic-input" className="outline-transparent w-full font-display md:text-[22px] text-base text-white py-6 md:px-10 px-6 bg-input rounded-full mb-6" placeholder="What’s the topic?" />
                             <input className="hidden" type="checkbox" name="" id="privacy" />
                             <label className="mt-12 items-start font-body text-white flex md:gap-6 gap-4" htmlFor="privacy">I have read and accepted «Terms and Conditions», «Responsible gaming», «No warranties»</label>
                             <input className="hidden" type="checkbox" name="" id="age-check" />

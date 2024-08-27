@@ -167,6 +167,24 @@ textarea:focus::placeholder {
     pointer-events: all;
 }
 
+.account-table {
+    width: calc(100% + 32px);
+    scrollbar-color: #FFFFFF #2D2D32;
+}
+
+@media (max-width: 1023.98px) {
+    .account-table {
+        width: 100%;
+        height: calc(100% + 20px);
+        padding-bottom: 20px;
+    }
+}
+
+.account-table::-moz-scrollbar-button, 
+.account-table::-webkit-scrollbar-button {
+    display: none;
+}
+
 @media (max-width: 1023.98px) {
     body:has(.navigation.active) {
         overflow: hidden;
@@ -191,6 +209,9 @@ textarea:focus::placeholder {
         padding: 30px 24px;
         pointer-events: all;
         transition: 400ms ease;
+    }
+    .navigation li a:hover path {
+        fill: #B8FF72;
     }
   }
 

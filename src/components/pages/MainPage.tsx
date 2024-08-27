@@ -82,9 +82,9 @@ export default function MainPage() {
                             </div>
                             <img className='xl:static absolute object-contain h-auto -z-10 top-20 right-0 md:w-[170px] w-24' src="img/form-arrow.png" alt="Hero Img"/>
                             <form className="flex flex-col w-full max-w-2xl">
-                                <input type="email" name="email-input" id="email-input" className="backdrop-blur outline-transparent w-full text-xl text-white py-6 px-10 bg-input rounded-full mb-6" placeholder="What’s your e-mail?" />
-                                <input type="text" name="topic-input" id="topic-input" className="outline-transparent w-full text-xl text-white py-6 px-10 bg-input rounded-full mb-6" placeholder="What’s the topic?" />
-                                <textarea name="message" id=" message" placeholder="What’s your message?" className="outline-transparent h-60 resize-none w-full text-xl text-white py-6 px-10 bg-input mb-10"></textarea>
+                                <input type="email" name="email-input" id="email-input" className="font-display backdrop-blur outline-transparent w-full md:text-[22px] text-base text-white py-6 md:px-10 px-6 bg-input rounded-full mb-6" placeholder="What’s your e-mail?" />
+                                <input type="text" name="topic-input" id="topic-input" className="font-display outline-transparent w-full md:text-[22px] text-base text-white py-6 md:px-10 px-6 bg-input rounded-full mb-6" placeholder="What’s the topic?" />
+                                <textarea name="message" id=" message" placeholder="What’s your message?" className="font-display outline-transparent h-60 resize-none w-full md:text-[22px] text-base text-white py-6 md:px-10 px-6 bg-input mb-10"></textarea>
                                 <button className="w-full bg-green text-dark text-2xl py-10 flex xl:hidden items-center justify-center font-bold rounded-full gap-6 mt-auto uppercase hover:opacity-80">
                                     send an e-mail
                                     <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">

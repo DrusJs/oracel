@@ -48,7 +48,7 @@ export default function Header() {
                     </button>
                     <ul className="flex lg:flex-row flex-col lg:items-center gap-10  lg:mt-2 mt-20 text-nowrap lg:w-auto w-fulls font-display lg:text-lg text-2xl">
                         <li className="flex lg:text-secondary text-white font-bold poi">
-                            <Link className="lg:border-b-0 border-b-[1px] border-white flex items-center justify-between lg:w-auto w-full hover:text-green" 
+                            <Link className="lg:border-b-0 border-b-[1px] border-white flex items-center justify-between lg:w-auto w-full hover:text-green hover:border-green" 
                                 to="/"
                                 onClick={toggleNav}
                                 >
@@ -59,7 +59,7 @@ export default function Header() {
                             </Link>
                         </li>
                         <li className="flex lg:text-secondary text-white font-bold">
-                            <Link className="lg:border-b-0 border-b-[1px] border-white flex items-center justify-between lg:w-auto w-full hover:text-green" 
+                            <Link className="lg:border-b-0 border-b-[1px] border-white flex items-center justify-between lg:w-auto w-full hover:text-green hover:border-green" 
                             to="/legal"
                             onClick={toggleNav}
                             >
@@ -70,6 +70,10 @@ export default function Header() {
                             </Link>
                         </li>
                     </ul>
+                    <div className="lg:hidden flex items-center gap-4 mt-4">
+                        <button className="bg-white rounded-3xl font-bold px-6 w-full py-3 hover:opacity-80 flex justify-center items-center text-nowrap" onClick={login}>Sign In</button>
+                        <button className="bg-green rounded-3xl font-bold px-6 w-full py-3 hover:opacity-80 flex justify-center items-center text-nowrap" onClick={login}>Sign Up</button>
+                    </div>
                 </nav>
                 <div className="flex items-start gap-4">
                 <div className="language-select flex flex-col gap-3 border-2 border-green rounded-3xl px-5 py-2 mt-1 cursor-pointer relative z-10 bg-dark" onClick={toggleLangSelect}>
@@ -117,7 +121,7 @@ export default function Header() {
                     </button>
                     <ul className="flex lg:flex-row flex-col lg:items-center gap-10 lg:mt-2 mt-20 text-nowrap lg:w-auto w-full list-none font-display lg:text-lg text-2xl">
                         <li className="flex lg:text-secondary text-white font-bold lg:w-auto w-full">
-                            <Link className="lg:border-b-0 border-b-[1px] border-white flex items-center justify-between lg:w-auto w-full hover:text-green" 
+                            <Link className="lg:border-b-0 border-b-[1px] border-white flex items-center justify-between lg:w-auto w-full hover:text-green hover:border-green" 
                                 to="/"
                                 onClick={toggleNav}
                                 >
@@ -128,7 +132,7 @@ export default function Header() {
                             </Link>
                         </li>
                         <li className="flex lg:text-secondary text-white font-bold lg:w-auto w-full">
-                            <Link className="lg:border-b-0 border-b-[1px] border-white flex items-center justify-between lg:w-auto w-full hover:text-green" 
+                            <Link className="lg:border-b-0 border-b-[1px] border-white flex items-center justify-between lg:w-auto w-full hover:text-green hover:border-green" 
                                 to="/account#history"
                                 onClick={toggleNav}
                                 >
@@ -139,7 +143,7 @@ export default function Header() {
                             </Link>
                         </li>
                         <li className="flex lg:text-secondary text-white font-bold">
-                            <Link className="lg:border-b-0 border-b-[1px] border-white flex items-center justify-between lg:w-auto w-full hover:text-green" 
+                            <Link className="lg:border-b-0 border-b-[1px] border-white flex items-center justify-between lg:w-auto w-full hover:text-green hover:border-green" 
                                 to="/balance"
                                 onClick={toggleNav}
                                 >
@@ -150,7 +154,7 @@ export default function Header() {
                             </Link>
                         </li>
                         <li className="flex lg:text-secondary text-white font-bold">
-                            <Link className="lg:border-b-0 border-b-[1px] border-white flex items-center justify-between lg:w-auto w-full hover:text-green" 
+                            <Link className="lg:border-b-0 border-b-[1px] border-white flex items-center justify-between lg:w-auto w-full hover:text-green hover:border-green" 
                                 to="/account"
                                 onClick={toggleNav}
                                 >
@@ -161,6 +165,9 @@ export default function Header() {
                             </Link>
                         </li>
                     </ul>
+                    <div className="lg:hidden flex items-center gap-4 mt-4">
+                        <button className="bg-white rounded-3xl font-bold px-10 py-3 hover:opacity-80 flex text-nowrap" onClick={logout}>Sign Out</button>
+                    </div>
                 </nav>
                 <div className="flex items-start gap-4">
                     <div className="language-select flex flex-col gap-3 border-2 border-green rounded-3xl px-5 py-2  mt-1 cursor-pointer relative z-10 bg-dark" onClick={toggleLangSelect}>

@@ -37,9 +37,9 @@ export default function LegalPage() {
                         </Link>
                     </div>
                     <form className="flex flex-col w-full max-w-2xl">
-                        <input type="email" name="email-input" id="email-input" className="outline-transparent w-full text-xl text-white py-6 px-10 bg-input rounded-full mb-6" placeholder="What’s your e-mail?" />
-                        <input type="text" name="topic-input" id="topic-input" className="outline-transparent w-full text-xl text-white py-6 px-10 bg-input rounded-full mb-6" placeholder="What’s the topic?" />
-                        <textarea name="message" id=" message" placeholder="What’s your message?" className="outline-transparent h-60 resize-none w-full text-xl text-white py-6 px-10 bg-input mb-14"></textarea>
+                        <input type="email" name="email-input" id="email-input" className="font-display outline-transparent w-full md:text-[22px] text-base text-white py-6 md:px-10 px-6 bg-input rounded-full mb-6" placeholder="What’s your e-mail?" />
+                        <input type="text" name="topic-input" id="topic-input" className="font-display outline-transparent w-full md:text-[22px] text-base text-white py-6 md:px-10 px-6 bg-input rounded-full mb-6" placeholder="What’s the topic?" />
+                        <textarea name="message" id=" message" placeholder="What’s your message?" className="font-display outline-transparent h-60 resize-none w-full text-xl text-white py-6 md:px-10 px-6 bg-input mb-14"></textarea>
                         <button className="w-full bg-green text-dark text-2xl py-10 flex items-center justify-center font-bold rounded-full gap-6 uppercase">
                             send an e-mail
                             <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">

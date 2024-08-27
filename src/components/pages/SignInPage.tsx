@@ -17,8 +17,8 @@ export default function SignInPage() {
                             <img src="img/dice3.png" alt="Dice sign in" className="absolute -z-10 -left-10 top-1/2 w-[180px]"/>
                         </div>
                         <form className="flex flex-col w-full lg:max-w-2xl mt-12">
-                            <input type="email" name="email-input" id="email-input" className="outline-transparent w-full text-xl text-white py-6 px-10 bg-input rounded-full mb-6" placeholder="What’s your e-mail?" />
-                            <input type="text" name="topic-input" id="topic-input" className="outline-transparent w-full text-xl text-white py-6 px-10 bg-input rounded-full mb-6" placeholder="What’s the topic?" />
+                            <input type="email" name="email-input" id="email-input" className="outline-transparent w-full font-display md:text-[22px] text-base text-white py-6 md:px-10 px-6 bg-input rounded-full mb-6" placeholder="What’s your e-mail?" />
+                            <input type="text" name="topic-input" id="topic-input" className="outline-transparent w-full font-display md:text-[22px] text-base text-white py-6 md:px-10 px-6 bg-input rounded-full mb-6" placeholder="What’s the topic?" />
                             <button className="w-full bg-green text-dark md:text-2xl text-lg font-display md:py-10 py-6 mt-14 flex items-center justify-center font-bold rounded-full gap-6 uppercase">
                                 SIGN IN
                                 <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">

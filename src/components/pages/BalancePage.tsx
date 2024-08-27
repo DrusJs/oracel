@@ -106,7 +106,7 @@ export default function BalancePage() {
                                 <div className="font-body font-bold md:text-xl text-base text-white py-4 px-2 bg-dark rounded-2xl cursor-pointer" onClick={changeItem}>BTC</div>
                             </div>
                             <input className="hidden" type="checkbox" name="" id="privacy" />
-                            <label className="font-body text-white" htmlFor="privacy">I have read and accepted «Terms and Conditions», «Responsible gaming», «No warranties»</label>
+                            <label className="font-body text-white items-start gap-6" htmlFor="privacy">I have read and accepted «Terms and Conditions», «Responsible gaming», «No warranties»</label>
                             <button className="w-fit px-16 bg-green text-dark text-xl py-6 flex items-center justify-center font-bold rounded-full gap-4 hover:opacity-80">
                                 Top Up
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -123,13 +123,13 @@ export default function BalancePage() {
                         <h2 className="font-body text-3xl text-white uppercase font-semibold mb-10">Is something bothering you?</h2>
                         <p className="font-display text-[22px] font-bold text-white md:mb-20 mb-10">I want to report a...</p>
                         <div className="grid sm:grid-cols-2 grid-cols-1 text-center gap-4">
-                            <div className="font-display font-bold md:text-xl text-base text-white py-6 px-2 bg-gray-secondary rounded-full cursor-pointer" onClick={setActiveItem}>Compliant</div>
-                            <div className="font-display font-bold md:text-xl text-base text-white py-6 px-2 bg-gray-secondary rounded-full cursor-pointer active_item" onClick={setActiveItem}>Technical issue</div>
+                            <div className="font-display font-bold md:text-xl text-base text-white py-6 px-2 bg-gray-secondary rounded-full cursor-pointer"  onClick={changeItem}>Compliant</div>
+                            <div className="font-display font-bold md:text-xl text-base text-white py-6 px-2 bg-gray-secondary rounded-full cursor-pointer active_item"  onClick={changeItem}>Technical issue</div>
                         </div>
                         <img src="img/sad-square.png" alt="" className="mt-12  hidden lg:block" />
                     </div>
                     <div className="flex flex-col">
-                        <textarea name="message" id=" message" placeholder="What’s your message?" className="outline-transparent lg:h-full h-[400px] resize-none w-full font-display text-[22px] text-white py-6 px-10 bg-input"></textarea>
+                        <textarea name="message" id=" message" placeholder="What’s your message?" className="outline-transparent lg:h-full h-[400px] resize-none w-full font-display md:text-[22px] text-base text-white py-6 md:px-10 px-6 bg-input"></textarea>
                         <button className="w-full bg-green text-dark md:text-3xl text-lg font-display md:py-10 py-7 mt-14 flex items-center justify-center font-bold rounded-full md:gap-6 gap-3 uppercase hover:opacity-80" onClick={toggleModal}>
                             send
                             <svg className='md:w-auto w-4' width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
