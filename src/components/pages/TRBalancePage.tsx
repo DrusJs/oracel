@@ -99,7 +99,7 @@ export default function TRBalancePage() {
                                 <div className="font-body font-bold md:text-xl text-base text-white py-4 px-2 bg-dark rounded-2xl cursor-pointer" onClick={changeItem}>BTC</div>
                             </div>
                             <input className="hidden" type="checkbox" name="" id="privacy" />
-                            <label className="font-body text-white" htmlFor="privacy">"Şartlar ve Koşullar", "Gizlilik politikası", "Sorumlu oyun", "Garanti yok" u okudum ve kabul ettim.</label>
+                            <label className="font-body text-white items-start gap-6" htmlFor="privacy">"Şartlar ve Koşullar", "Gizlilik politikası", "Sorumlu oyun", "Garanti yok" u okudum ve kabul ettim.</label>
                             <button className="w-fit px-16 bg-green text-dark text-xl py-6 flex items-center justify-center font-bold rounded-full gap-4 hover:opacity-80">
                                 Kontör
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

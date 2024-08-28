@@ -215,7 +215,7 @@ textarea:focus::placeholder {
     }
   }
 
-  @media (min-width: 400px) {
+  @media (min-width: 400px) and (max-width: 520px) {
     .main-desc {
         font-size: 24px !important;
     }

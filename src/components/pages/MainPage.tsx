@@ -227,8 +227,8 @@ export default function MainPage() {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="flex md:flex-col flex-row items-center gap-6 lg:ml-auto">
-                                                <p className="md:text-5xl text-2xl text-white font-body font-bold">28.46 EUR</p>
+                                            <div className="flex md:flex-col flex-row items-center gap-6  lg:ml-auto">
+                                                <p className="md:text-5xl text-2xl text-white font-body font-bold sm:inline flex flex-col">28.46 <span>EUR</span></p>
                                                 <button className="bg-green rounded-full font-bold md:text-2xl text-xl md:px-10 text-nowrap md:py-6 px-6 py-4 hover:opacity-80" onClick={toggleCard}>Get the results</button>
                                             </div>
                                         </div>
@@ -358,8 +358,8 @@ export default function MainPage() {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="flex md:flex-col flex-row items-center gap-6 lg:ml-auto">
-                                                <p className="md:text-5xl text-2xl text-white font-body font-bold">28.46 EUR</p>
+                                            <div className="flex md:flex-col flex-row items-center gap-6  lg:ml-auto">
+                                                <p className="md:text-5xl text-2xl text-white font-body font-bold sm:inline flex flex-col">28.46 <span>EUR</span></p>
                                                 <button className="bg-green rounded-full font-bold md:text-2xl text-xl md:px-10 text-nowrap md:py-6 px-6 py-4 hover:opacity-80" onClick={toggleCard}>Get the results</button>
                                             </div>
                                         </div>
@@ -489,8 +489,8 @@ export default function MainPage() {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="flex md:flex-col flex-row items-center gap-6 lg:ml-auto">
-                                                <p className="md:text-5xl text-2xl text-white font-body font-bold">28.46 EUR</p>
+                                            <div className="flex md:flex-col flex-row items-center gap-6  lg:ml-auto">
+                                                <p className="md:text-5xl text-2xl text-white font-body font-bold sm:inline flex flex-col">28.46 <span>EUR</span></p>
                                                 <button className="bg-green rounded-full font-bold md:text-2xl text-xl md:px-10 text-nowrap md:py-6 px-6 py-4 hover:opacity-80" onClick={toggleCard}>Get the results</button>
                                             </div>
                                         </div>

@@ -24,65 +24,71 @@ export default function DTMainPage() {
         <main className="main flex flex-col flex-1">
             { isAuthenticated ? (
             <>              
-                <section className="main-banner mx-auto px-14 pt-8 bg-green rounded-3xl flex flex-col">
-                    <h1 className="text-[420px] font-head leading-none text-center overflow-hidden text-dark">OracleBet</h1>
-                    <div className="flex gap-10 flex-wrap">
-                        <div className="flex flex-col pb-10">
-                            <p className="main-desc text-5xl uppercase text-dark font-semibold">making sure your bets win</p>
-                            <div className="flex items-center gap-2">
-                                <div className="rounded-main p-10 flex flex-col bg-white mt-8 gap-8">
-                                    <p className="font-semibold font-body text-2xl uppercase">wir arbeiten mit verschiedenen Sportarten, darunter </p>
-                                    <button className="text-white text-2xl uppercase bg-dark rounded-full py-6 font-bold">cybersports</button>
+                <section className="main-banner w-full relative mx-auto md:px-14 px-4 pt-16 overflow-hidden bg-green rounded-3xl flex flex-col">
+                    <h1 className="main-text xl:text-[420px] font-head xl:leading-[320px] lg:text-[320px] lg:leading-[240px] md:text-[220px] md:leading-[140px] text-[124px] leading-[100px] text-center text-dark flex flex-wrap">Oracle<span>Bet</span></h1>
+                    <div className="main-flex gap-10">
+                        <div className="flex flex-col pb-10 col-span-2">
+                            <p className="main-desc md:text-5xl text-[22px] uppercase text-dark font-semibold">making sure your bets win</p>
+                            <div className="flex items-center gap-2 mt-8">
+                                <div className="rounded-main md:p-10 p-4 flex flex-col bg-white gap-8">
+                                    <p className="font-semibold font-body md:text-2xl text-base uppercase">wir arbeiten mit verschiedenen Sportarten, darunter </p>
+                                    <button className="text-white md:text-2xl text-[17px] font-display uppercase bg-dark rounded-full py-6 font-bold">cybersports</button>
                                 </div>
                                 <div className="flex flex-col gap-2">
-                                    <img src="img/logo-pubg.png" alt="PUBG" width="114"/>
-                                    <img src="img/logo-dota.png" alt="Dota2" width="114"/>
+                                    <img src="img/logo-pubg.png" alt="PUBG" className='md:w-28 w-20' width="114"/>
+                                    <img src="img/logo-dota.png" alt="Dota2" className='md:w-28 w-20' width="114"/>
                                 </div>
                             </div>
                         </div>                    
-                        <img src="img/hero-image.png" alt="Hero Img" className="-mt-80" width="593"/>
+                        <img src="img/hero-image.png" alt="Hero Img" className="main-img -mt-[220px] object-contain" width="593"/>
                         <div className="flex flex-col pb-10">
-                            <div className="flex items-center gap-3">
-                                <p className="main-desc text-4xl font-semibold text-dark uppercase">um Ihre erstendrei Prognosen zu erhalten </p>
-                                <div className=" bg-blue rounded-full w-40 h-40 text-white text-2xl uppercase font-bold flex justify-center items-center text-center">for<br></br>free</div>
+                            <div className="flex md:items-center items-end md:gap-3 md:justify-start justify-between gap-6">
+                                <p className="main-desc md:text-4xl text-xl font-semibold text-dark uppercase">um Ihre ersten drei Prognosen zu erhalten </p>
+                                <div className="bg-blue rounded-full md:w-40 md:min-w-40 md:h-40 w-32 h-32 min-w-32 text-white text-2xl uppercase font-bold flex justify-center items-center text-center">for<br></br>free</div>
                             </div>
-                            <button className="w-full bg-dark text-white text-2xl mt-8 py-10 flex items-center justify-center font-bold rounded-full gap-6 uppercase">
+                            <button className="w-full bg-dark font-display text-white md:text-2xl text-lg mt-8 md:py-10 py-6 flex items-center justify-center font-bold rounded-full gap-6 uppercase">
                                 jetzt registrieren
-                                <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="27" height="28" className='md:w-[27px] w-4' viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.3218 1.1549C12.9727 0.50403 14.028 0.50403 14.6788 1.1549L26.3455 12.8216C26.9964 13.4724 26.9964 14.5277 26.3455 15.1786L14.6788 26.8453C14.028 27.4961 12.9727 27.4961 12.3218 26.8453C11.6709 26.1944 11.6709 25.1391 12.3218 24.4882L21.1433 15.6667H1.83366C0.913184 15.6667 0.166992 14.9206 0.166992 14.0001C0.166992 13.0796 0.913184 12.3334 1.83366 12.3334H21.1433L12.3218 3.51193C11.6709 2.86105 11.6709 1.80578 12.3218 1.1549Z" fill="#FFFFFF"/>
                                 </svg>
                             </button>
-                            <div className="flex justify-between gap-4 mt-10 pr-4">
+                            <div className="flex justify-between md:gap-4 gap-2 mt-10 pr-4">
                                 <div className="flex gap-2 items-center">
                                     <img src="img/tabler_category-filled.svg" alt="Hero Img"/>
-                                    <p className="font-medium text-xl">Alle vorhersagekategorien</p>                               
+                                    <p className="font-medium md:text-xl text-base">Alle vorhersagekategorien</p>                               
                                 </div>
                                 <div className="flex gap-2 items-center">
                                     <img src="img/ic_round-token.svg" alt="Hero Img"/>    
-                                    <p className="font-medium text-xl">Krypto und Fiat werden unterstützt</p>                              
+                                    <p className="font-medium md:text-xl text-base">Krypto und Fiat werden unterstützt</p>                              
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>    
                 <section className="mt-36">
-                    <div className="container container-sm mx-auto">
-                        <div className="flex">
-                            <div className="flex flex-col">
-                                <h2 className="text-8xl text-white uppercase font-head text-nowrap">Kontaktieren Sie uns</h2>
-                                <p className="text-3xl text-white">wir beantworten alle Ihre Fragen persönlich - senden Sie uns einfach eine E-Mail </p>
-                                <button className="w-full bg-green text-dark text-2xl py-10 flex items-center justify-center font-bold rounded-full gap-6 mt-auto uppercase hover:opacity-80">
+                    <div className="container container-sm mx-auto md:px-8 px-4">
+                        <div className="flex xl:flex-row flex-col relative xl:gap-0 gap-10">
+                            <div className="flex flex-col xl:gap-2 gap-10">
+                                <h2 className="md:text-8xl text-6xl text-white uppercase font-head">Kontaktieren Sie uns</h2>
+                                <p className="font-display md:text-3xl text-[22px] text-secondary xl:pr-0 md:pr-40 pr-24">wir beantworten alle Ihre Fragen persönlich - senden Sie uns einfach eine E-Mail </p>
+                                <button className="w-full bg-green text-dark text-2xl py-10 xl:flex hidden items-center justify-center font-bold rounded-full gap-6 mt-auto uppercase hover:opacity-80">
                                     senden Sie eine E-Mail
                                     <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12.3218 1.1549C12.9727 0.50403 14.028 0.50403 14.6788 1.1549L26.3455 12.8216C26.9964 13.4724 26.9964 14.5277 26.3455 15.1786L14.6788 26.8453C14.028 27.4961 12.9727 27.4961 12.3218 26.8453C11.6709 26.1944 11.6709 25.1391 12.3218 24.4882L21.1433 15.6667H1.83366C0.913184 15.6667 0.166992 14.9206 0.166992 14.0001C0.166992 13.0796 0.913184 12.3334 1.83366 12.3334H21.1433L12.3218 3.51193C11.6709 2.86105 11.6709 1.80578 12.3218 1.1549Z" fill="#1C1B23"/>
                                     </svg>
                                 </button>
                             </div>
-                            <img src="img/form-arrow.png" alt="Hero Img"/>
+                            <img className='xl:static absolute object-contain h-auto -z-10 top-20 right-0 md:w-[170px] w-24' src="img/form-arrow.png" alt="Hero Img"/>
                             <form className="flex flex-col w-full max-w-2xl">
-                                <input type="email" name="email-input" id="email-input" className="outline-transparent w-full text-xl text-white py-6 px-10 bg-input rounded-full mb-6" placeholder="Wie lautet Ihre E-Mail-Adresse?" />
-                                <input type="text" name="topic-input" id="topic-input" className="outline-transparent w-full text-xl text-white py-6 px-10 bg-input rounded-full mb-6" placeholder="Was ist das Thema?" />
-                                <textarea name="message" id=" message" placeholder="Was ist deine Botschaft?" className="outline-transparent h-60 resize-none w-full text-xl text-white py-6 px-10 bg-input"></textarea>
+                                <input type="email" name="email-input" id="email-input" className="font-display backdrop-blur outline-transparent w-full md:text-[22px] text-base text-white py-6 md:px-10 px-6 bg-input rounded-full mb-6" placeholder="What’s your e-mail?" />
+                                <input type="text" name="topic-input" id="topic-input" className="font-display outline-transparent w-full md:text-[22px] text-base text-white py-6 md:px-10 px-6 bg-input rounded-full mb-6" placeholder="What’s the topic?" />
+                                <textarea name="message" id=" message" placeholder="What’s your message?" className="font-display outline-transparent grow-1 min-h-60 h-full resize-none w-full md:text-[22px] text-base text-white py-6 md:px-10 px-6 bg-input mb-10"></textarea>
+                                <button className="w-full bg-green text-dark text-2xl py-10 flex xl:hidden items-center justify-center font-bold rounded-full gap-6 mt-auto uppercase hover:opacity-80">
+                                    senden Sie eine E-Mail
+                                    <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3218 1.1549C12.9727 0.50403 14.028 0.50403 14.6788 1.1549L26.3455 12.8216C26.9964 13.4724 26.9964 14.5277 26.3455 15.1786L14.6788 26.8453C14.028 27.4961 12.9727 27.4961 12.3218 26.8453C11.6709 26.1944 11.6709 25.1391 12.3218 24.4882L21.1433 15.6667H1.83366C0.913184 15.6667 0.166992 14.9206 0.166992 14.0001C0.166992 13.0796 0.913184 12.3334 1.83366 12.3334H21.1433L12.3218 3.51193C11.6709 2.86105 11.6709 1.80578 12.3218 1.1549Z" fill="#1C1B23"/>
+                                    </svg>
+                                </button>
                             </form>
                         </div>
                     </div>
@@ -162,15 +168,15 @@ export default function DTMainPage() {
                                 <div className="flex gap-2 md:items-center items-start justify-between md:flex-row flex-col">
                                     <div className="bg-gray-secondary rounded-3xl font-bold px-10 py-3 sm:w-auto w-full">
                                         <input className="hidden" type="checkbox" name="" id="score-check" />
-                                        <label className="font-body font-medium text-xl text-secondary" htmlFor="score-check"><div>Immer einschließen <span className='font-extrabold'>Score</span></div></label>
+                                        <label className="font-body font-medium text-xl text-secondary gap-4" htmlFor="score-check"><div>Immer einschließen <span className='font-extrabold'>Score</span></div></label>
                                     </div>
                                     <div className="bg-gray-secondary rounded-3xl font-bold px-10 py-3 sm:w-auto w-full">
                                         <input className="hidden" type="checkbox" name="" id="handicap-check" />
-                                        <label className="font-body font-medium text-xl text-secondary" htmlFor="handicap-check"><div>Immer einschließen <span className='font-extrabold'>Handicap</span></div></label>
+                                        <label className="font-body font-medium text-xl text-secondary gap-4" htmlFor="handicap-check"><div>Immer einschließen <span className='font-extrabold'>Handicap</span></div></label>
                                     </div>
                                     <div className="bg-gray-secondary rounded-3xl font-bold px-10 py-3 sm:w-auto w-full">
                                         <input className="hidden" type="checkbox" name="" id="total-check" />
-                                        <label className="font-body font-medium text-xl text-secondary" htmlFor="total-check"><div>Immer einschließen <span className='font-extrabold'>Total</span></div></label>
+                                        <label className="font-body font-medium text-xl text-secondary gap-4" htmlFor="total-check"><div>Immer einschließen <span className='font-extrabold'>Total</span></div></label>
                                     </div>
                                 </div>
                                 <p className='text-secondary text-lg font-medium font-body text-right max-w-2xl ml-auto'>Dies sind Master-Einstellungen - falls ausgewählt, werden sie auf jede der folgenden Karten angewendet.<br></br> Sie können sie separat auf einer bestimmten Karte Ihrer Wahl ändern.</p>
@@ -184,11 +190,11 @@ export default function DTMainPage() {
                                             </div>
                                             <div className="flex md:gap-6 gap-4">
                                                 <input className="hidden" type="checkbox" name="" id="card-check1" />
-                                                <label className="font-body font-semibold text-xl text-secondary" htmlFor="card-check1">Score</label>
+                                                <label className="font-body font-semibold text-xl text-secondary gap-4" htmlFor="card-check1">Score</label>
                                                 <input className="hidden" type="checkbox" name="" id="card-check2" />
-                                                <label className="font-body font-semibold text-xl text-secondary" htmlFor="card-check2">Handicap</label>
+                                                <label className="font-body font-semibold text-xl text-secondary gap-4" htmlFor="card-check2">Handicap</label>
                                                 <input className="hidden" type="checkbox" name="" id="card-check3" />
-                                                <label className="font-body font-semibold text-xl text-secondary" htmlFor="card-check3">Total</label>
+                                                <label className="font-body font-semibold text-xl text-secondary gap-4" htmlFor="card-check3">Total</label>
                                             </div>
                                         </div>
                                         <div className="flex xl:flex-nowrap flex-wrap gap-10">
@@ -217,9 +223,9 @@ export default function DTMainPage() {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="flex md:flex-col flex-row items-center gap-6">
-                                                <p className="md:text-5xl text-2xl text-white font-body font-bold">28.46 EUR</p>
-                                                <button className="bg-green rounded-full font-bold md:text-2xl text-xl md:px-10 text-nowrap md:py-6 px-6 py-4 hover:opacity-80" onClick={toggleCard}>Ergebnisse erhalten</button>
+                                            <div className="flex md:flex-col flex-row items-center gap-6 lg:ml-auto">
+                                                <p className="md:text-5xl text-2xl text-white font-body font-bold sm:inline flex flex-col">28.46 <span>EUR</span></p>
+                                                <button className="bg-green rounded-full font-bold md:text-2xl text-xl md:px-10 text-nowrap md:py-6 px-2 md:w-fit w-full py-4 hover:opacity-80" onClick={toggleCard}>Ergebnisse erhalten</button>
                                             </div>
                                         </div>
                                     </div>
@@ -315,11 +321,11 @@ export default function DTMainPage() {
                                             </div>
                                             <div className="flex md:gap-6 gap-4">
                                                 <input className="hidden" type="checkbox" name="" id="card-check4" />
-                                                <label className="font-body font-semibold text-xl text-secondary" htmlFor="card-check4">Score</label>
+                                                <label className="font-body font-semibold text-xl text-secondary gap-4" htmlFor="card-check4">Score</label>
                                                 <input className="hidden" type="checkbox" name="" id="card-check5" />
-                                                <label className="font-body font-semibold text-xl text-secondary" htmlFor="card-check5">Handicap</label>
+                                                <label className="font-body font-semibold text-xl text-secondary gap-4" htmlFor="card-check5">Handicap</label>
                                                 <input className="hidden" type="checkbox" name="" id="card-check6" />
-                                                <label className="font-body font-semibold text-xl text-secondary" htmlFor="card-check6">Total</label>
+                                                <label className="font-body font-semibold text-xl text-secondary gap-4" htmlFor="card-check6">Total</label>
                                             </div>
                                         </div>
                                         <div className="flex xl:flex-nowrap flex-wrap gap-10">
@@ -348,9 +354,9 @@ export default function DTMainPage() {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="flex md:flex-col flex-row items-center gap-6">
-                                                <p className="md:text-5xl text-2xl text-white font-body font-bold">28.46 EUR</p>
-                                                <button className="bg-green rounded-full font-bold md:text-2xl text-xl md:px-10 text-nowrap md:py-6 px-6 py-4 hover:opacity-80" onClick={toggleCard}>Ergebnisse erhalten</button>
+                                            <div className="flex md:flex-col flex-row items-center gap-6 lg:ml-auto">
+                                                <p className="md:text-5xl text-2xl text-white font-body font-bold sm:inline flex flex-col">28.46 <span>EUR</span></p>
+                                                <button className="bg-green rounded-full font-bold md:text-2xl text-xl md:px-10 text-nowrap md:py-6 px-2 md:w-fit w-full py-4 hover:opacity-80" onClick={toggleCard}>Ergebnisse erhalten</button>
                                             </div>
                                         </div>
                                     </div>
@@ -446,11 +452,11 @@ export default function DTMainPage() {
                                             </div>
                                             <div className="flex md:gap-6 gap-4">
                                                 <input className="hidden" type="checkbox" name="" id="card-check7" />
-                                                <label className="font-body font-semibold text-xl text-secondary" htmlFor="card-check7">Score</label>
+                                                <label className="font-body font-semibold text-xl text-secondary gap-4" htmlFor="card-check7">Score</label>
                                                 <input className="hidden" type="checkbox" name="" id="card-check8" />
-                                                <label className="font-body font-semibold text-xl text-secondary" htmlFor="card-check8">Handicap</label>
+                                                <label className="font-body font-semibold text-xl text-secondary gap-4" htmlFor="card-check8">Handicap</label>
                                                 <input className="hidden" type="checkbox" name="" id="card-check9" />
-                                                <label className="font-body font-semibold text-xl text-secondary" htmlFor="card-check9">Total</label>
+                                                <label className="font-body font-semibold text-xl text-secondary gap-4" htmlFor="card-check9">Total</label>
                                             </div>
                                         </div>
                                         <div className="flex xl:flex-nowrap flex-wrap gap-10">
@@ -479,9 +485,9 @@ export default function DTMainPage() {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="flex md:flex-col flex-row items-center gap-6">
-                                                <p className="md:text-5xl text-2xl text-white font-body font-bold">28.46 EUR</p>
-                                                <button className="bg-green rounded-full font-bold md:text-2xl text-xl md:px-10 text-nowrap md:py-6 px-6 py-4 hover:opacity-80" onClick={toggleCard}>Ergebnisse erhalten</button>
+                                            <div className="flex md:flex-col flex-row items-center gap-6 lg:ml-auto">
+                                                <p className="md:text-5xl text-2xl text-white font-body font-bold sm:inline flex flex-col">28.46 <span>EUR</span></p>
+                                                <button className="bg-green rounded-full font-bold md:text-2xl text-xl md:px-10 text-nowrap md:py-6 px-2 md:w-fit w-full py-4 hover:opacity-80" onClick={toggleCard}>Ergebnisse erhalten</button>
                                             </div>
                                         </div>
                                     </div>
