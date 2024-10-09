@@ -24,6 +24,7 @@ export default function SignInPage() {
                                 </svg>
                             </button>
                         </form>
+                        <a href="/resetpass" className="text-center md:text-xl text-base text-tretiary italic mt-8">Forgot your passward?</a>
                     </div>
                     <div className="lg:flex hidden flex-col text-white w-full max-w-xl relative items-end mt-32">
                         <div className="flex items-center max-w-[460px] bg-white md:px-10 md:py-12 p-6 md:gap-6 gap-2 rounded-[50px]">

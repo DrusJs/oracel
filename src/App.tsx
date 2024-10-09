@@ -11,6 +11,7 @@ import SignInPage from './components/pages/SignInPage';
 import MessagePage from './components/pages/MessagePage';
 import BalanceAwaitPage from './components/pages/BalanceAwaitPage';
 import SignOutSuccessPage from './components/pages/SignOutSuccessPage';
+import ResetPassPage from './components/pages/ResetPassPage'
 import SiteMap from './components/pages/SiteMap';
 import Footer from './components/layout/Footer';
 
@@ -37,6 +38,7 @@ function App() {
         <Route path="/balance-await" element={<BalanceAwaitPage />} />
         <Route path="/oops" element={<MessagePage />} />
         <Route path="/signout" element={<SignOutSuccessPage />} />
+        <Route path="/resetpass" element={<ResetPassPage />} />
         <Route path="/" element={<SiteMap />} />
       
         <Route path="/trMainPage" element={<TRMainPage />} />
