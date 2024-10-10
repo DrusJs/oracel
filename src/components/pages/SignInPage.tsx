@@ -1,4 +1,10 @@
+import { useState } from 'react';
+import Modal from '../features/Modal';
+
 export default function SignInPage() {
+    const [isModalOpen, setModalOpen] = useState(false);
+
+    function toggleModal() { setModalOpen(!isModalOpen); } 
 
     return (
         <main className="main flex flex-col">
@@ -15,8 +21,8 @@ export default function SignInPage() {
                             <img src="img/dice3.png" alt="Dice sign in" className="absolute -z-10 -left-10 top-1/2 w-[180px]"/>
                         </div>
                         <form className="flex flex-col w-full lg:max-w-2xl mt-12">
-                            <input type="email" name="email-input" id="email-input" className="outline-transparent w-full font-display md:text-[22px] text-base text-white py-6 md:px-10 px-6 bg-input rounded-full mb-6" placeholder="What’s your e-mail?" />
-                            <input type="text" name="topic-input" id="topic-input" className="outline-transparent w-full font-display md:text-[22px] text-base text-white py-6 md:px-10 px-6 bg-input rounded-full mb-6" placeholder="What’s the topic?" />
+                            <input type="email" name="email-input" id="email-input" className="outline-transparent w-full font-display md:text-[22px] text-base text-white py-6 md:px-10 px-6 bg-input rounded-full mb-6" placeholder="Your e-mail" />
+                            <input type="text" name="password-input" id="password-input" className="outline-transparent w-full font-display md:text-[22px] text-base text-white py-6 md:px-10 px-6 bg-input rounded-full mb-6" placeholder="Your passward" />
                             <button className="w-full bg-green text-dark md:text-2xl text-lg font-display md:py-10 py-6 mt-14 flex items-center justify-center font-bold rounded-full gap-6 uppercase">
                                 SIGN IN
                                 <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,7 +30,7 @@ export default function SignInPage() {
                                 </svg>
                             </button>
                         </form>
-                        <a href="/resetpass" className="text-center md:text-xl text-base text-tretiary italic mt-8">Forgot your passward?</a>
+                        <p onClick={toggleModal} className="text-center cursor-pointer md:text-xl text-base text-tretiary italic mt-8">Forgot your passward?</p>
                     </div>
                     <div className="lg:flex hidden flex-col text-white w-full max-w-xl relative items-end mt-32">
                         <div className="flex items-center max-w-[460px] bg-white md:px-10 md:py-12 p-6 md:gap-6 gap-2 rounded-[50px]">
@@ -35,7 +41,23 @@ export default function SignInPage() {
                         <img src="img/dice3.png" alt="Dice sign in" className="absolute -z-10 -left-10 top-1/4"/>
                     </div>
                 </div>
-            </div>        
+            </div>  
+            <Modal isOpen={isModalOpen} onClose={toggleModal}>
+                <div className="flex flex-col w-full items-center">
+                    <h1 className="title md:text-3xl text-2xl font-body font-semibold text-gray-secondary">Forgot your password?</h1>
+                    <p className="font-body md:text-2xl text-base font-medium md:text-center text-gray-secondary mt-4 max-w-[700px]">Don’t worry, resetting your passward is easy!
+                    Enter the email associated with your account and we’ll send an email with instructions to reset your passward.</p>
+                    <form className="flex flex-col w-full lg:max-w-2xl md:mt-12 mt-8">                        
+                        <input type="email" name="email-input" id="email-input" className="outline-transparent w-full font-display md:text-[22px] text-base text-white py-6 md:px-10 px-6 bg-input-dark rounded-full mt-10" placeholder="Your e-mail" />
+                        <button className="w-full bg-green text-dark md:text-2xl text-lg font-display md:py-6 py-6 mt-10 flex items-center justify-center font-bold rounded-full uppercase">
+                            SEND A CODE 
+                        </button>
+                    </form>
+                    <p className="md:text-xl text-base font-medium font-body text-gray-secondary mt-12">
+                        Remembered your passward? <a href="/signin" className="italic underline text-gray-secondary text-opacity-55">Try logging in</a>
+                    </p>
+                </div>
+            </Modal>      
         </main>
     );
 }
