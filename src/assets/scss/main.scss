@@ -105,16 +105,17 @@ input[type='checkbox'] + label {
     }
 }
 
-@media (max-width: 1880px) and (min-width:1281px) {
+@media (max-width: 1880px) and (min-width:978px) {
     .main-text {
-        font-size: 22.5vw !important;
+        font-size: 21vw !important;
         line-height: 17vw !important;
+        flex-wrap: nowrap;
     }
 }
 
 @media (max-width: 768px) {
     .main-text {
-        font-size: 34.5vw !important;
+        font-size: 32.5vw !important;
         line-height: 24vw !important;
     }
 }
